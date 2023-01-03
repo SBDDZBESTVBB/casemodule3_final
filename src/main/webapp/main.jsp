@@ -33,17 +33,9 @@
                                 <div class="invalid-feedback">
                                     Please fill email or user ID.
                                 </div>
-                                <%--                                <div class="valid-feedback">--%>
-                                <%--                                    Looks good!--%>
-                                <%--                                </div>--%>
+
                             </div>
-                            <%--                            <div class="col-md-4">--%>
-                            <%--                                <label for="validationCustom02" class="form-label">Last name</label>--%>
-                            <%--                                <input type="text" class="form-control" id="validationCustom02" required>--%>
-                            <%--                                <div class="valid-feedback">--%>
-                            <%--                                    Looks good!--%>
-                            <%--                                </div>--%>
-                            <%--                            </div>--%>
+
                             <div class="row">
                                 <label for="validationUserPassword" class="form-label">Password</label>
                                 <div class="input-group has-validation">
@@ -64,26 +56,7 @@
     </modal>
 
     <section class="section">
-        <!-- Topbar End -->
-        <!-- Modal -->
-<%--        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-<%--            <div class="modal-dialog">--%>
-<%--                <div class="modal-content">--%>
-<%--                    <div class="modal-header">--%>
-<%--                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>--%>
-<%--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
-<%--                    </div>--%>
-<%--                    <div class="modal-body">--%>
-<%--                        ...--%>
-<%--                    </div>--%>
-<%--                    <div class="modal-footer">--%>
-<%--                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>--%>
-<%--                        <button type="button" class="btn btn-primary">Save changes</button>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-        <!-- Navbar Start -->
+
         <div class="container-fluid mb-5 ">
             <div class="row border-top px-xl-5">
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -662,14 +635,7 @@
 
 <!-- Vendor JS Files -->
 <!-- Vendor JS Files -->
-<%--<script src="resource/assets/vendor/apexcharts/apexcharts.min.js"></script>--%>
-<%--<script src="resource/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
-<%--<script src="resource/assets/vendor/chart.js/chart.min.js"></script>--%>
-<%--<script src="resource/assets/vendor/echarts/echarts.min.js"></script>--%>
-<%--<script src="resource/assets/vendor/quill/quill.min.js"></script>--%>
-<%--<script src="resource/assets/vendor/simple-datatables/simple-datatables.js"></script>--%>
-<%--<script src="resource/assets/vendor/tinymce/tinymce.min.js"></script>--%>
-<%--<script src="resource/assets/vendor/php-email-form/validate.js"></script>--%>
+
 
 <!-- Template Main JS File -->
 <script src="resource/assets/js/main.js"></script>
