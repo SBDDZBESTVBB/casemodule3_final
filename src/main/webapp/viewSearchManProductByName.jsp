@@ -199,7 +199,7 @@
             </div>
 
 
-            <c:forEach var="p" items="${coat}">
+            <c:forEach var="p" items="${search}">
 
               <div class="col-lg-4 col-md-6 col-sm-12 pb-1" style="background: #2eca6a">
                 <div class="card product-item border-0 mb-4">

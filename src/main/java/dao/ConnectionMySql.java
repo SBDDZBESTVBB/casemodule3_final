@@ -1,4 +1,4 @@
-package com.example.case_module3_final.dao;
+package dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

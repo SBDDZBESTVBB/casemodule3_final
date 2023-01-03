@@ -1,4 +1,4 @@
-package com.example.case_module3_final.models;
+package models;
 
 public class Product {
     private int id;

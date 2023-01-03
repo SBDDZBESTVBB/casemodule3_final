@@ -173,13 +173,10 @@
                         <div class="col-12 pb-1">
                             <div class="d-flex align-items-center justify-content-between mb-4">
                                 <%--                                Form tìm kiếm --%>
-                                <form action="">
+                                <form action="/ProductServlet" method="get">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search by name" style="color: #18d26e">
-
-                                            <a href="" class="btn btn-sm text-dark p-0" style="background: #f1bf41"><i
-                                                    class="fas fa-eye text-primary mr-1"></i>Search</a>
-
+                                        <input type="text" class="form-control" placeholder="Search by name" style="color: #18d26e" name="search">
+                                        <button class="btn btn-sm text-dark p-0" style="background: #ff771d" type="submit">Search</button>
                                     </div>
                                 </form>
                                 <div class="dropdown ml-4">

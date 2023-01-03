@@ -1,8 +1,8 @@
-package com.example.case_module3_final.services;
+package services;
 
-import com.example.case_module3_final.dao.ManProductDAO;
+import dao.ManProductDAO;
 
-import com.example.case_module3_final.models.Product;
+import models.Product;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class ManProductService {
     public static List<Product> getAllManShort(){
         return ManProductDAO.getAllManShort();
     }
-    public static List<Product> getSearchManShort(){
-        return ManProductDAO.getSearchManShort();
+    public static List<Product> getSearchProduct(String search){
+        return ManProductDAO.getSearchProduct(search);
     }
 }

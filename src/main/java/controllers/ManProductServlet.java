@@ -1,6 +1,7 @@
-package com.example.case_module3_final.controllers;
+package controllers;
 
-import com.example.case_module3_final.services.ManProductService;
+import models.Product;
+import services.ManProductService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 @WebServlet(urlPatterns = "/ManProductServlet")
 public class ManProductServlet extends HttpServlet {
@@ -18,6 +20,9 @@ public class ManProductServlet extends HttpServlet {
         RequestDispatcher requestDispatcher = null;
         if (action == null) {
             action = "";
+            if (request.getParameter("search")!= null) {
+                action = "search";
+            }
         }
         switch (action) {
             case "manshirt":
@@ -36,16 +41,17 @@ public class ManProductServlet extends HttpServlet {
                 request.setAttribute("short", ManProductService.getAllManShort());
                 requestDispatcher = request.getRequestDispatcher("/man-short-hoanh.jsp");
                 break;
-
+            case "search":
+                String search=request.getParameter("search");
+                List<Product> product = ManProductService.getSearchProduct(search);
+                request.setAttribute("search", product);
+                requestDispatcher = request.getRequestDispatcher("/viewSearchManProductByName.jsp");
+                break;
             default:
                 break;
         }
         requestDispatcher.forward(request, response);
-
-
-
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

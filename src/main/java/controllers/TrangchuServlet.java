@@ -1,4 +1,4 @@
-package com.example.case_module3_final.controllers;
+package controllers;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
