@@ -13,7 +13,8 @@ public class ProductWomenDAO {
     static Connection connection = ConnectionMySql.getConnection();
     public static List<Product> getAllWomenShirt() {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product.category='shirts'and product.size='s'";
+
+        String sql = "SELECT * FROM product WHERE product.category='shirts' and product.producttype='women'product.size='s'";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -36,7 +37,9 @@ public class ProductWomenDAO {
     }
     public static List<Product> getAllWomenCoat() {
         List<Product> products = new ArrayList<>();
+
         String sql = "SELECT * FROM product WHERE product.category='coat' and product.producttype='women' and product.size='s'";
+
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -59,7 +62,9 @@ public class ProductWomenDAO {
     }
     public static List<Product> getAllWomenJeans() {
         List<Product> products = new ArrayList<>();
+
         String sql = "SELECT * FROM product WHERE product.category='jeans' and product.size='s'";
+
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -82,7 +87,10 @@ public class ProductWomenDAO {
     }
     public static List<Product> getAllWomenDress() {
         List<Product> products = new ArrayList<>();
+
         String sql = "SELECT * FROM product WHERE product.category='dress' and product.size='s'";
+
+
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
