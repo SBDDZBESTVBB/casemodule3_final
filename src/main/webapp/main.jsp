@@ -7,11 +7,12 @@
     <jsp:param name="head" value=""/>
 </jsp:include>
 
+
 <body>
-<jsp:include page='${pageContext.request.contextPath}/header.jsp'>
-    <jsp:param name="nav" value=""/>
+<jsp:include page='/header.jsp'>
+    <jsp:param name="header" value=""/>
 </jsp:include>
-<jsp:include page='${pageContext.request.contextPath}/sidebar.jsp'>
+<jsp:include page='/sidebar.jsp'>
     <jsp:param name="asside" value=""/>
 </jsp:include>
 
@@ -28,22 +29,13 @@
                         <form class="row g-3 needs-validation" novalidate>
                             <div class="row">
                                 <label for="validationLoginEmail" class="form-label">Email/ID</label>
-                                <input type="text" class="form-control" id="validationLoginEmail"
-                                       aria-describedby="inputGroupPrepend" required>
+                                <input type="text" class="form-control" id="validationLoginEmail" aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                     Please fill email or user ID.
                                 </div>
-                                <%--                                <div class="valid-feedback">--%>
-                                <%--                                    Looks good!--%>
-                                <%--                                </div>--%>
+
                             </div>
-                            <%--                            <div class="col-md-4">--%>
-                            <%--                                <label for="validationCustom02" class="form-label">Last name</label>--%>
-                            <%--                                <input type="text" class="form-control" id="validationCustom02" required>--%>
-                            <%--                                <div class="valid-feedback">--%>
-                            <%--                                    Looks good!--%>
-                            <%--                                </div>--%>
-                            <%--                            </div>--%>
+
                             <div class="row">
                                 <label for="validationUserPassword" class="form-label">Password</label>
                                 <div class="input-group has-validation">
@@ -64,26 +56,7 @@
     </modal>
 
     <section class="section">
-        <!-- Topbar End -->
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar Start -->
+
         <div class="container-fluid mb-5 ">
             <div class="row border-top px-xl-5">
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -607,6 +580,38 @@
 
 
         <!-- Vendor Start -->
+        <div class="container-fluid py-5">
+            <div class="row px-xl-5">
+                <div class="col">
+                    <div class="owl-carousel vendor-carousel">
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-1.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-2.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-3.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-4.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-5.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-6.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-7.jpg" alt="">
+                        </div>
+                        <div class="vendor-item border p-4">
+                            <img src="img/vendor-8.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- Vendor End -->
 </main>
@@ -618,14 +623,22 @@
         &copy; Copyright <strong><span>Tran Huy Media Mart</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+        <%--        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>--%>
     </div>
 </footer><!-- End Footer -->
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bi bi-arrow-up-short"></i></a>
 
+<!-- Vendor JS Files -->
+<!-- Vendor JS Files -->
+
+
 <!-- Template Main JS File -->
-<script src="<c:url value="/main.js"/>"></script>
+<script src="resource/assets/js/main.js"></script>
 
 </body>
 
