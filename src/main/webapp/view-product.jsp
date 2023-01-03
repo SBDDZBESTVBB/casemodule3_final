@@ -198,7 +198,55 @@
                                         <a href="" class="btn btn-sm text-dark p-0"><i
                                                 class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                                         <a href="" class="btn btn-sm text-dark p-0"><i
-                                                class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
+                                                class="fas fa-shopping-cart text-primary mr-1"></i>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#addtocart">
+                                                Add To Cart
+                                            </button>
+                                        </a>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="addToCart" data-bs-backdrop="static"
+                                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="addToCartLabel"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h1 class="modal-title fs-5" id="addToCartLabel">Add to cart</h1>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                                                            <img class="img-fluid w-100"
+                                                                 src="${p.imgproduct}">
+                                                        </div>
+                                                        <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                                            <h6 class="text-truncate mb-3">${p.productname}</h6>
+                                                            <div class="d-flex justify-content-center">
+                                                                <h6>${p.price}</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <select>Size
+                                                                <option>S</option>
+                                                                <option>M</option>
+                                                                <option>L</option>
+                                                                <option>XL</option>
+                                                            </select>
+                                                            <label for="amount">Amount</label>
+                                                            <input type="number" id="amount">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary">Understood</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

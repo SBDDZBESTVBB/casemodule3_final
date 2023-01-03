@@ -13,14 +13,15 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+          <h1 action = "login" method = "post">Login</h1>
+          <p class="text-danger"> ${mess}</p>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form class="row g-3 needs-validation" novalidate method="post">
             <div class="row">
-              <label for="validationLoginEmail" class="form-label">Email/ID</label>
-              <input type="text" class="form-control" id="validationLoginEmail"
+              <label for="validationLoginEmail" class="form-label">User Name</label>
+              <input name="username" class="form-control" id="validationLoginEmail"
                      aria-describedby="inputGroupPrepend" required>
               <div class="invalid-feedback">
                 Please fill email or user ID.
@@ -29,7 +30,7 @@
             <div class="row">
               <label for="validationUserPassword" class="form-label">Password</label>
               <div class="input-group has-validation">
-                <input type="password" class="form-control" id="validationUserPassword"
+                <input name="password" class="form-control" id="validationUserPassword"
                        aria-describedby="inputGroupPrepend" required>
                 <div class="invalid-feedback">
                   Please fill the correct password.

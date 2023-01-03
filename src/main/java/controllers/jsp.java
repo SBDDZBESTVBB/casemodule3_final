@@ -1,7 +1,7 @@
 package controllers;
 
+import models.User;
 import models.oderdetail;
-import models.user;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -14,7 +14,7 @@ public class jsp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        user user = new user();
+        User user = new User();
         ArrayList<oderdetail> oderdetails = new ArrayList<>();
         session.setAttribute("user",user);
         session.setAttribute("oderdetail",oderdetails);
