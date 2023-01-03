@@ -52,16 +52,16 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-item d-flex align-items-center" href="#login">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">
-                            Login
+                            <span>Login</span>
                         </button>
 
                         <!-- Modal -->
 
                     </li>
                     <li class="dropdown-item d-flex align-items-center" href="#register">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#registerModal">
                             <span>Register</span>
                         </button>
@@ -69,7 +69,8 @@
                 </ul>
                 <a id="userprofile" class="nav-link nav-profile d-flex align-items-center pe-0 visually-hidden" href="#"
                    data-bs-toggle="dropdown">
-                    <img src="${pageContext.request.contextPath}/img/blank-user.png" alt="Profile" class="rounded-circle">
+                    <img src="${pageContext.request.contextPath}/img/blank-user.png" alt="Profile"
+                         class="rounded-circle">
                     <span class="d-none d-md-block dropdown-toggle ps-2">Account</span>
                 </a><!-- End Profile Iamge Icon -->
 
@@ -94,7 +95,8 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="${pageContext.request.contextPath}/user-profile.jsp">
+                        <a class="dropdown-item d-flex align-items-center"
+                           href="${pageContext.request.contextPath}/user-profile.jsp">
                             <i class="bi bi-gear"></i>
                             <span>Account Settings</span>
                         </a>

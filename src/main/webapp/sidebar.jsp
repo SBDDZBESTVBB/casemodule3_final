@@ -125,16 +125,20 @@
         </li><!-- End Profile Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>F.A.Q</span>
+            <a class="nav-link collapsed">
+                <span><button class="btn" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#topselling" aria-expanded="false" aria-controls="topselling">
+                    Show TOP Selling
+                </button></span>
             </a>
-        </li><!-- End F.A.Q Page Nav -->
+        </li><!-- Show top selling -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-contact.html">
-                <i class="bi bi-envelope"></i>
-                <span>Contact</span>
+            <a class="nav-link collapsed">
+                <span><button class="btn" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#adminview" aria-expanded="false" aria-controls="adminview">
+                    Admin View Product
+                </button></span>
             </a>
         </li><!-- End Contact Page Nav -->
 

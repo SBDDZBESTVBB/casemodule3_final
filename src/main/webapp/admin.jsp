@@ -36,7 +36,7 @@
                 <jsp:param name="addnew" value=""/>
             </jsp:include>
         </div>
-        <div class="row">
+        <div class="row collapsed" id="topselling">
             <div class="col-12">
                 <div class="card top-selling overflow-auto">
                     <div class="card-body pb-0"><h5 class="card-title">Top Selling</h5>
@@ -98,6 +98,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row collapsed" id="adminview">
+            <table>
+                <th>img</th>
+                <th>Product's name</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th></th>
+                <th></th>
+            </table>
         </div>
     </section>
 </main>
