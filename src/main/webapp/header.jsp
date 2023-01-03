@@ -40,7 +40,7 @@
 
             <li class="nav-item">
 
-                <a class="nav-link nav-icon" href="${pageContext.request.contextPath}/cartdetail">
+                <a class="nav-link nav-icon" href="${pageContext.request.contextPath}/cart-detail.jsp">
                     <i class="bi bi-cart"></i>
                     <span class="badge bg-primary badge-number">4</span>
                 </a><!-- End Cart Icon -->
@@ -52,21 +52,25 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                     <li class="dropdown-item d-flex align-items-center" href="#login">
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">
-                            Login
+                            <span>Login</span>
                         </button>
 
                         <!-- Modal -->
 
                     </li>
                     <li class="dropdown-item d-flex align-items-center" href="#register">
-                        <span>Register</span>
+                        <button type="button" class="btn" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">
+                            <span>Register</span>
+                        </button>
                     </li>
                 </ul>
                 <a id="userprofile" class="nav-link nav-profile d-flex align-items-center pe-0 visually-hidden" href="#"
                    data-bs-toggle="dropdown">
-                    <img src="resource/assets/img/blank-user.png" alt="Profile" class="rounded-circle">
+                    <img src="${pageContext.request.contextPath}/img/blank-user.png" alt="Profile"
+                         class="rounded-circle">
                     <span class="d-none d-md-block dropdown-toggle ps-2">Account</span>
                 </a><!-- End Profile Iamge Icon -->
 
@@ -91,20 +95,14 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#users-profile.html">
+                        <a class="dropdown-item d-flex align-items-center"
+                           href="${pageContext.request.contextPath}/user-profile.jsp">
                             <i class="bi bi-gear"></i>
                             <span>Account Settings</span>
                         </a>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
-                    </li>
-
-                    <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#pages-faq.html">
-                            <i class="bi bi-question-circle"></i>
-                            <span>Need Help?</span>
-                        </a>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
