@@ -31,16 +31,16 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="https://hanoicomputercdn.com/media/banner/18_Novfd9bbc3056ddbea809ff6387640d68cd.png"
-                                 class="d-block w-100" alt="anh1" height="318" width="920">
+                            <img src="https://mensfolio.vn/wp-content/uploads/2021/04/Gucci-Aria-MF-Online-95-1.jpg"
+                                 class="d-block w-100" alt="anh1" height="700" width="920">
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="https://hanoicomputercdn.com/media/banner/21_Augcab55c203a8d0f8cac3ce83e7950acf1.png"
-                                 class="d-block w-100" alt="anh2" height="318" width="920">
+                            <img src="https://www.celeb.vn/wp-content/uploads/2021/07/high-fashion-la-gi-1.jpg"
+                                 class="d-block w-100" alt="anh2" height="700" width="920">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://hacom.vn/media/lib/10-12-2022/tin-tuc.jpg"
-                                 class="d-block w-100" alt="anh3" height="318" width="920">
+                            <img src="https://file.hstatic.net/200000182297/file/z3824988104332_e30b6f149c965440666761b25c489464__1__dbc437c43a9b4e3892dfc3cfe78edd72.jpg"
+                                 class="d-block w-100" alt="anh3" height="700" width="920">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"

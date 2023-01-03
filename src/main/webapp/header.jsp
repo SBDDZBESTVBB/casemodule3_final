@@ -67,7 +67,7 @@
                         </button>
                     </li>
                 </ul>
-                <a id="userprofile" class="nav-link nav-profile d-flex align-items-center pe-0 visually-hidden" href="#"
+                <a id="userprofile" class="nav-link nav-profile d-flex align-items-center pe-0 " href="#"
                    data-bs-toggle="dropdown">
                     <img src="${pageContext.request.contextPath}/img/blank-user.png" alt="Profile"
                          class="rounded-circle">
@@ -85,7 +85,7 @@
 
                     <li>
                         <a class="dropdown-item d-flex align-items-center"
-                           href="${pageContext.request.contextPath}/userprofile">
+                           href="${pageContext.request.contextPath}/user-profile.jsp">
                             <i class="bi bi-person"></i>
                             <span>My Profile</span>
                         </a>
