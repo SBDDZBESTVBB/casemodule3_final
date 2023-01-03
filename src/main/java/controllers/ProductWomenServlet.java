@@ -1,7 +1,6 @@
 package controllers;
 
 import models.Product;
-import services.ProductService;
 import services.ProductWomenService;
 
 import javax.servlet.RequestDispatcher;
@@ -24,20 +23,20 @@ public class ProductWomenServlet extends HttpServlet {
         }
         switch (action) {
             case "shirtwomen":
-                req.setAttribute("shirts", ProductWomenService.getAllWomenShirt());
-                requestDispatcher = req.getRequestDispatcher("/view-shirt-women-tuan.jsp");
+                req.setAttribute("products", ProductWomenService.getAllWomenShirt());
+                requestDispatcher = req.getRequestDispatcher("view-product.jsp");
                 break;
             case "coatwomen":
-                req.setAttribute("coat",ProductWomenService.getAllWomenCoat());
-                requestDispatcher = req.getRequestDispatcher("/view-coat-women-tuan.jsp");
+                req.setAttribute("products",ProductWomenService.getAllWomenCoat());
+                requestDispatcher = req.getRequestDispatcher("view-product.jsp");
                 break;
             case "jeanswomen":
-                req.setAttribute("jeans",ProductWomenService.getAllWomenJeans());
-                requestDispatcher = req.getRequestDispatcher("/view-jeans-women-tuan.jsp");
+                req.setAttribute("products",ProductWomenService.getAllWomenJeans());
+                requestDispatcher = req.getRequestDispatcher("view-product.jsp");
                 break;
             case "dresswomen":
-                req.setAttribute("dress",ProductWomenService.getAllWomenDress());
-                requestDispatcher = req.getRequestDispatcher("/view-dress-women-tuan.jsp");
+                req.setAttribute("products",ProductWomenService.getAllWomenDress());
+                requestDispatcher = req.getRequestDispatcher("view-product.jsp");
                 break;
         }
         requestDispatcher.forward(req,resp);

@@ -1,8 +1,8 @@
-package com.example.case_module3_final.services;
+package services;
 
-import com.example.case_module3_final.dao.ManProductDAO;
+import dao.ManProductDAO;
 
-import com.example.case_module3_final.models.Product;
+import models.Product;
 
 import java.util.List;
 

@@ -30,18 +30,12 @@
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-        <jsp:include page="loginmodal.jsp">
-            <jsp:param name="login" value=""/>
-        </jsp:include>
-        <jsp:include page="registermodal.jsp">
-            <jsp:param name="register" value=""/>
-        </jsp:include>
         <div class="container-fluid pt-5">
             <div class="row px-xl-5">
                 <!-- Shop Sidebar Start -->
-                <div class="col-lg-3 col-md-12">
+               <!-- <div class="col-lg-3 col-md-12"> -->
                     <!-- Price Start -->
-                    <div class="border-bottom mb-4 pb-4">
+                    <!--<div class="border-bottom mb-4 pb-4">
                         <h5 class="font-weight-semi-bold mb-4">Filter by price</h5>
                         <form>
                             <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
@@ -76,10 +70,10 @@
                             </div>
                         </form>
                     </div>
-                    <!-- Price End -->
+                     Price End -->
 
                     <!-- Color Start -->
-                    <div class="border-bottom mb-4 pb-4">
+                   <!-- <div class="border-bottom mb-4 pb-4">
                         <h5 class="font-weight-semi-bold mb-4">Filter by color</h5>
                         <form>
                             <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
@@ -114,10 +108,10 @@
                             </div>
                         </form>
                     </div>
-                    <!-- Color End -->
+                     Color End -->
 
                     <!-- Size Start -->
-                    <div class="mb-5">
+                    <!--<div class="mb-5">
                         <h5 class="font-weight-semi-bold mb-4">Filter by size</h5>
                         <form>
                             <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
@@ -152,7 +146,7 @@
                             </div>
                         </form>
                     </div>
-                    <!-- Size End -->
+                    Size End -->
                 </div>
                 <!-- Shop Sidebar End -->
 
@@ -186,205 +180,30 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-1.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
+
+                        <c:forEach var="p" items="${products}">
+                            <div class="col-lg-4 col-md-6 col-sm-12 pb-1" >
+                                <div class="card product-item border-0 mb-4">
+                                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                                        <img class="img-fluid w-100"
+                                             src="${p.imgproduct}">
+                                    </div>
+                                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                        <h6 class="text-truncate mb-3">${p.productname}</h6>
+                                        <div class="d-flex justify-content-center">
+                                            <h6>${p.price}</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between bg-light border">
+                                        <a href="" class="btn btn-sm text-dark p-0"><i
+                                                class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                                        <a href="" class="btn btn-sm text-dark p-0"><i
+                                                class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                                     </div>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
                             </div>
-                        </div>
-                        //
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-2.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-3.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-4.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-5.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-6.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-7.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-8.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
-                            <div class="card product-item border-0 mb-4">
-                                <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                    <img class="img-fluid w-100" src="${pageContext.servletContext.contextPath}img/product-1.jpg" alt="">
-                                </div>
-                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                    <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
-                                    <div class="d-flex justify-content-center">
-                                        <h6>$123.00</h6>
-                                        <h6 class="text-muted ml-2">
-                                            <del>$123.00</del>
-                                        </h6>
-                                    </div>
-                                </div>
-                                <div class="card-footer d-flex justify-content-between bg-light border">
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
-                                </div>
-                            </div>
-                        </div>
+                        </c:forEach>
+
                         <div class="col-12 pb-1">
                             <nav aria-label="Page navigation">
                                 <ul class="pagination justify-content-center mb-3">

@@ -1,6 +1,7 @@
-package com.example.case_module3_final.dao;
+package dao;
 
-import com.example.case_module3_final.models.Product;
+
+import models.Product;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,7 +13,7 @@ public class ManProductDAO {
     static Connection connection = ConnectionMySql.getConnection();
     public static List<Product> getAllManShirt() {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product.category='shirt' AND product.size='s' ";
+        String sql = "SELECT * FROM product WHERE product.category='shirt' AND product.size='s' and product.producttype='men' ";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -34,7 +35,7 @@ public class ManProductDAO {
     }
     public static List<Product> getAllManCoat() {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product.category='coat' AND product.size='s' ";
+        String sql = "SELECT * FROM product WHERE product.category='coat' AND product.size='s' and product.producttype='men' ";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -56,7 +57,7 @@ public class ManProductDAO {
     }
     public static List<Product> getAllManJeans() {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product.category='jeans' AND product.size='s' ";
+        String sql = "SELECT * FROM product WHERE product.category='jeans' AND product.size='s' and product.producttype='men' ";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -78,7 +79,7 @@ public class ManProductDAO {
     }
     public static List<Product> getAllManShort() {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product.category='short' AND product.size='s' ";
+        String sql = "SELECT * FROM product WHERE product.category='short' AND product.size='s' and product.producttype='men' ";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);

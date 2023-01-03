@@ -1,6 +1,6 @@
-package com.example.case_module3_final.dao;
+package dao;
 
-import com.example.case_module3_final.models.Product;
+import models.Product;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
