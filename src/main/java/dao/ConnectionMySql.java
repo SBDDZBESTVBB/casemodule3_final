@@ -18,4 +18,8 @@ public class ConnectionMySql {
         }
         return connection;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d07227d8321e869b3e276f04474fabe4147a98f0

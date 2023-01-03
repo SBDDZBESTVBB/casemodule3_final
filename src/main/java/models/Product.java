@@ -1,7 +1,11 @@
 package models;
 
 public class Product {
+<<<<<<< HEAD
     private int id;
+=======
+    private int idproduct;
+>>>>>>> d07227d8321e869b3e276f04474fabe4147a98f0
     private String category;
     private String productname;
     private String color;
@@ -13,8 +17,13 @@ public class Product {
     public Product() {
     }
 
+<<<<<<< HEAD
     public Product(int id, String category, String productname, String color, String size, double price, int amountproduct, String imgproduct) {
         this.id = id;
+=======
+    public Product(int idproduct, String category, String productname, String color, String size, double price, int amountproduct, String imgproduct) {
+        this.idproduct = idproduct;
+>>>>>>> d07227d8321e869b3e276f04474fabe4147a98f0
         this.category = category;
         this.productname = productname;
         this.color = color;
@@ -24,12 +33,21 @@ public class Product {
         this.imgproduct = imgproduct;
     }
 
+<<<<<<< HEAD
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+=======
+    public int getIdproduct() {
+        return idproduct;
+    }
+
+    public void setIdproduct(int idproduct) {
+        this.idproduct = idproduct;
+>>>>>>> d07227d8321e869b3e276f04474fabe4147a98f0
     }
 
     public String getCategory() {
