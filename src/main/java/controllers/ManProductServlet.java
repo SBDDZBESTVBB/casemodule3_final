@@ -1,6 +1,5 @@
-package com.example.case_module3_final.controllers;
-
-import com.example.case_module3_final.services.ManProductService;
+package controllers;
+import services.ManProductService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,20 +20,20 @@ public class ManProductServlet extends HttpServlet {
         }
         switch (action) {
             case "manshirt":
-                request.setAttribute("shirt", ManProductService.getAllManShirt());
-                requestDispatcher = request.getRequestDispatcher("/man-shirt-hoanh.jsp");
+                request.setAttribute("products", ManProductService.getAllManShirt());
+                requestDispatcher = request.getRequestDispatcher("view-product.jsp");
                 break;
             case "mancoat":
-                request.setAttribute("coat", ManProductService.getAllManCoat());
-                requestDispatcher = request.getRequestDispatcher("/man-coat-hoanh.jsp");
+                request.setAttribute("products", ManProductService.getAllManCoat());
+                requestDispatcher = request.getRequestDispatcher("view-product.jsp");
                 break;
             case "manjeans":
-                request.setAttribute("jeans", ManProductService.getAllManJeans());
-                requestDispatcher = request.getRequestDispatcher("/man-jeans-hoanh.jsp");
+                request.setAttribute("products", ManProductService.getAllManJeans());
+                requestDispatcher = request.getRequestDispatcher("view-product.jsp");
                 break;
             case "manshort":
-                request.setAttribute("short", ManProductService.getAllManShort());
-                requestDispatcher = request.getRequestDispatcher("/man-short-hoanh.jsp");
+                request.setAttribute("products", ManProductService.getAllManShort());
+                requestDispatcher = request.getRequestDispatcher("view-product.jsp");
                 break;
 
             default:

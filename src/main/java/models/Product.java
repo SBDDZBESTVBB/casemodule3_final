@@ -3,6 +3,7 @@ package models;
 public class Product {
     private int idproduct;
     private String category;
+    private String producttype;
     private String productname;
     private String color;
     private String size;
@@ -22,6 +23,26 @@ public class Product {
         this.price = price;
         this.amountproduct = amountproduct;
         this.imgproduct = imgproduct;
+    }
+
+    public Product(int idproduct, String category, String producttype, String productname, String color, String size, double price, int amountproduct, String imgproduct) {
+        this.idproduct = idproduct;
+        this.category = category;
+        this.producttype = producttype;
+        this.productname = productname;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.amountproduct = amountproduct;
+        this.imgproduct = imgproduct;
+    }
+
+    public String getProducttype() {
+        return producttype;
+    }
+
+    public void setProducttype(String producttype) {
+        this.producttype = producttype;
     }
 
     public int getIdproduct() {

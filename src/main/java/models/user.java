@@ -1,4 +1,4 @@
-package modal;
+package models;
 
 public class user {
     private int iduser;

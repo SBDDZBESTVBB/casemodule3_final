@@ -35,22 +35,22 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="${pageContext.request.contextPath}/shirt">
+                    <a href="/ManProductServlet?action=manshirt">
                         <i class="bi bi-circle"></i><span>Shirt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#men-coat.html">
+                    <a href="/ManProductServlet?action=mancoat">
                         <i class="bi bi-circle"></i><span>Coat</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#men-jeans.html">
+                    <a href="/ManProductServlet?action=manjeans">
                         <i class="bi bi-circle"></i><span>Jeans</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#men-short.html">
+                    <a href="/ManProductServlet?action=manshort">
                         <i class="bi bi-circle"></i><span>Short</span>
                     </a>
                 </li>
@@ -65,22 +65,22 @@
             </a>
             <ul id="mobile-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="#Women-Shirt.html">
+                    <a href="/ProductWomenServlet?action=shirtwomen ">
                         <i class="bi bi-circle"></i><span>Shirt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#Women-Coat.html">
+                    <a href="/ProductWomenServlet?action=coatwomen ">
                         <i class="bi bi-circle"></i><span>Coat</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#Women-Jeans.html">
+                    <a href="/ProductWomenServlet?action=jeanswomen">
                         <i class="bi bi-circle"></i><span>Jeans</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#Women-Dress.html">
+                    <a href="/ProductWomenServlet?action=dresswomen">
                         <i class="bi bi-circle"></i><span>Dress</span>
                     </a>
                 </li>
