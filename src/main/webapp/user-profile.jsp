@@ -38,16 +38,10 @@
                 <div class="card">
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-                        <img src="${pageContext.servletContext.contextPath}resource/assets/img/blank-user.png"
+                        <img src="${pageContext.servletContext.contextPath}/img/blank-user.png"
                              alt="Profile" class="rounded-circle">
                         <h2>User's name</h2>
                         <h3>Somethings</h3>
-                        <div class="social-links mt-2">
-                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                        </div>
                     </div>
                 </div>
 
@@ -92,21 +86,99 @@
                                 <h5 class="card-title">Transaction history</h5>
 
                                 <div class="row">
-                                    <div class="row">
-                                        <table class="container-fluid align-content-center">
-                                            <tr class="container-fluid align-content-center">
-                                                <td class="col-lg-3">Hình ảnh</td>
-                                                <td class="col-lg-3">Tên hàng</td>
-                                                <td class="col-lg-1">Số lượng</td>
-                                                <td class="col-lg-2">Đơn giá</td>
-                                            </tr>
+                                    <div id="content" class="p-4 p-md-5 pt-5">
+                                        <c:forEach var="bill" items="${billinfos}">
+                                            <!-- Modal edit-->
+                                            <div class="modal fade" id="staticBackdrop${bill.billID}"
+                                                 data-bs-backdrop="static"
+                                                 data-bs-keyboard="false" tabindex="-1"
+                                                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="staticBackdropLabe">Thông tin
+                                                                hoá đơn:</h5>
+                                                            <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
 
-                                            <tr class="container-fluid align-content-center">
-                                                <td colspan="3" class="align-content-center">Thành tiền:</td>
-                                                <td>giá</td>
+                                                                <%--<input name="productID" placeholder="nhập id"><br>--%>
+                                                            <p>Khách hàng:${bill.name}</p>
+                                                            <p>Thời gian mua:${bill.date}</p>
+                                                            <table id="myTable" class="table table-striped">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>Tên sản phẩm</th>
+                                                                    <th>Số lượng</th>
+                                                                    <th>Giá</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <%--@elvariable id="products" type="java.util.List"--%>
+                                                                <c:forEach var="detail" items="${billDetails}">
+                                                                    <tr>
+                                                                        <c:if test="${detail.billID == bill.billID}">
+                                                                            <td>${detail.productID}</td>
+                                                                            <td>${detail.amount}</td>
+                                                                            <td>${detail.price}</td>
+                                                                        </c:if>
+
+
+                                                                    </tr>
+                                                                </c:forEach>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Close
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary">Understood
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </c:forEach>
+
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>id Hoá đơn</th>
+                                                <th>id người dùng</th>
+                                                <th>Tên người dùng</th>
+                                                <th>Tổng hoá đơn</th>
+                                                <th>Ngày giao dịch</th>
                                             </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%--@elvariable id="products" type="java.util.List"--%>
+                                            <c:forEach var="bill" items="${billinfos}">
+                                                <tr>
+                                                    <td>${bill.billID}</td>
+                                                    <td>${bill.userID}</td>
+                                                    <td>${bill.name}</td>
+                                                    <td>${bill.total}</td>
+                                                    <td>${bill.date}</td>
+
+                                                    <td>
+                                                        <button id="${bill.billID}" type="button"
+                                                                class="btn btn-primary" data-bs-toggle="modal"
+                                                                data-bs-target="#staticBackdrop${bill.billID}">
+                                                            Xem chi tiết
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <a href="?id=${bill.billID}"
+                                                           class="btn btn-danger">Xoá</a></td>
+                                                </tr>
+                                            </c:forEach>
+                                            </tbody>
                                         </table>
                                     </div>
+
 
                                 </div>
 
@@ -137,41 +209,13 @@
                                         <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
                                         <div class="col-md-8 col-lg-9">
                                             <input name="fullName" type="text" class="form-control" id="fullName"
-                                                   value="Kevin Anderson">
+                                                   value="name">
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
-                                        <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <textarea name="about" class="form-control" id="about"
-                                                      style="height: 100px">Sunt est soluta temporibus accusantium neque nam maiores cumque temporibus. Tempora libero non est unde veniam est qui dolor. Ut sunt iure rerum quae quisquam autem eveniet perspiciatis odit. Fuga sequi sed ea saepe at unde.</textarea>
-                                        </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="company" class="col-md-4 col-lg-3 col-form-label">Company</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="company" type="text" class="form-control" id="company"
-                                                   value="Lueilwitz, Wisoky and Leuschke">
-                                        </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="Job" class="col-md-4 col-lg-3 col-form-label">Job</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="job" type="text" class="form-control" id="Job"
-                                                   value="Web Designer">
-                                        </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="country" type="text" class="form-control" id="Country"
-                                                   value="USA">
-                                        </div>
-                                    </div>
 
                                     <div class="row mb-3">
                                         <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
@@ -197,41 +241,9 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
-                                        <label for="Twitter" class="col-md-4 col-lg-3 col-form-label">Twitter
-                                            Profile</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="twitter" type="text" class="form-control" id="Twitter"
-                                                   value="https://twitter.com/#">
-                                        </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Facebook
-                                            Profile</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="facebook" type="text" class="form-control" id="Facebook"
-                                                   value="https://facebook.com/#">
-                                        </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="Instagram" class="col-md-4 col-lg-3 col-form-label">Instagram
-                                            Profile</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="instagram" type="text" class="form-control" id="Instagram"
-                                                   value="https://instagram.com/#">
-                                        </div>
-                                    </div>
 
-                                    <div class="row mb-3">
-                                        <label for="Linkedin" class="col-md-4 col-lg-3 col-form-label">Linkedin
-                                            Profile</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <input name="linkedin" type="text" class="form-control" id="Linkedin"
-                                                   value="https://linkedin.com/#">
-                                        </div>
-                                    </div>
 
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-primary">Save Changes</button>
@@ -240,51 +252,6 @@
 
                             </div>
 
-                            <div class="tab-pane fade pt-3" id="profile-settings">
-
-                                <!-- Settings Form -->
-                                <form>
-
-                                    <div class="row mb-3">
-                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Email
-                                            Notifications</label>
-                                        <div class="col-md-8 col-lg-9">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="changesMade"
-                                                       checked>
-                                                <label class="form-check-label" for="changesMade">
-                                                    Changes made to your account
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="newProducts"
-                                                       checked>
-                                                <label class="form-check-label" for="newProducts">
-                                                    Information on new products and services
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="proOffers">
-                                                <label class="form-check-label" for="proOffers">
-                                                    Marketing and promo offers
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" id="securityNotify"
-                                                       checked disabled>
-                                                <label class="form-check-label" for="securityNotify">
-                                                    Security alerts
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary">Save Changes</button>
-                                    </div>
-                                </form><!-- End settings Form -->
-
-                            </div>
 
                             <div class="tab-pane fade pt-3" id="profile-change-password">
                                 <!-- Change Password Form -->
