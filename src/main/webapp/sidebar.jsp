@@ -22,36 +22,35 @@
             </a>
         </li><!-- End Dashboard Nav -->
         <li class="nav-item">
-            <a class="nav-link " href="${pageContext.request.contextPath}/viewProducts">
+            <a class="nav-link " href="${pageContext.request.contextPath}/view-product.jsp">
                 <i class="bi bi-grid"></i>
                 <span>Tất cả sản phẩm</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                 <img src="https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn" height="32"
                      width="32"></img><span>Men's wear</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-
-                    <a href="/ManProductServlet?action=manshirt">
+                    <a href="${pageContext.request.contextPath}/shirt">
                         <i class="bi bi-circle"></i><span>Shirt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/ManProductServlet?action=mancoat">
+                    <a href="#men-coat.html">
                         <i class="bi bi-circle"></i><span>Coat</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/ManProductServlet?action=manjeans">
+                    <a href="#men-jeans.html">
                         <i class="bi bi-circle"></i><span>Jeans</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/ManProductServlet?action=manshort">
+                    <a href="#men-short.html">
                         <i class="bi bi-circle"></i><span>Short</span>
                     </a>
                 </li>
@@ -60,28 +59,28 @@
         </li><!-- End Components Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#mobile-nav" data-bs-toggle="collapse" href="">
+            <a class="nav-link collapsed" data-bs-target="#mobile-nav" data-bs-toggle="collapse" href="#">
                 <img src="https://salt.tikicdn.com/ts/category/55/5b/80/48cbaafe144c25d5065786ecace86d38.png"
                      height="32" width="32"></img><span>Women's wear</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="mobile-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="/ProductWomenServlet?action=shirtwomen">
+                    <a href="#Women-Shirt.html">
                         <i class="bi bi-circle"></i><span>Shirt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/ProductWomenServlet?action=coatwomen">
+                    <a href="#Women-Coat.html">
                         <i class="bi bi-circle"></i><span>Coat</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/ProductWomenServlet?action=jeanswomen">
+                    <a href="#Women-Jeans.html">
                         <i class="bi bi-circle"></i><span>Jeans</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/ProductWomenServlet?action=dresswomen">
+                    <a href="#Women-Dress.html">
                         <i class="bi bi-circle"></i><span>Dress</span>
                     </a>
                 </li>
@@ -115,27 +114,31 @@
                 </li>
             </ul>
         </li><!-- End Forms Nav -->
-        <p>
-
-        </p>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="${pageContext.request.contextPath}/user/users-profile">
-                <i class="bi bi-person"></i>
-                <span>Profile</span>
+            <a class="nav-link collapsed">
+                <i class="bi bi-plus"></i>
+                <span>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#addnew">
+                    Add new product
+                </button></span>
             </a>
         </li><!-- End Profile Page Nav -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>F.A.Q</span>
+            <a class="nav-link collapsed">
+                <span><button class="btn" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#topselling" aria-expanded="false" aria-controls="topselling">
+                    Show TOP Selling
+                </button></span>
             </a>
-        </li><!-- End F.A.Q Page Nav -->
+        </li><!-- Show top selling -->
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-contact.html">
-                <i class="bi bi-envelope"></i>
-                <span>Contact</span>
+            <a class="nav-link collapsed">
+                <span><button class="btn" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#adminview" aria-expanded="false" aria-controls="adminview">
+                    Admin View Product
+                </button></span>
             </a>
         </li><!-- End Contact Page Nav -->
 

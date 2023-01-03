@@ -7,8 +7,6 @@
 </jsp:include>
 
 
-
-
 <body>
 <jsp:include page='/header.jsp'>
     <jsp:param name="header" value=""/>
@@ -31,6 +29,7 @@
                         <tr>
                             <th>Products</th>
                             <th>Price</th>
+                            <th>Size</th>
                             <th>Quantity</th>
                             <th>Total</th>
                             <th>Remove</th>
@@ -38,10 +37,53 @@
                         </thead>
                         <tbody class="align-middle">
                         <tr>
-                            <td class="align-middle"><img src="${pageContext.servletContext.contextPath}img/product-1.jpg" alt="" style="width: 50px;"> Colorful
+                            <td class="align-middle"><img
+                                    src="${pageContext.servletContext.contextPath}img/product-1.jpg" alt=""
+                                    style="width: 50px;"> Colorful
                                 Stylish Shirt
                             </td>
                             <td class="align-middle">$150</td>
+                            <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select></td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-primary btn-minus">
+                                            <i class="bi-dash"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control form-control-sm bg-secondary text-center"
+                                           value="1">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-primary btn-plus">
+                                            <i class="bi-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">$150</td>
+
+                            <td class="align-middle">
+                                <button class="btn btn-sm btn-primary"><i class="bi-x"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle"><img
+                                    src="${pageContext.servletContext.contextPath}img/product-2.jpg" alt=""
+                                    style="width: 50px;"> Colorful
+                                Stylish Shirt
+                            </td>
+                            <td class="align-middle">$150</td>
+                            <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select></td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
@@ -64,10 +106,18 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="${pageContext.servletContext.contextPath}img/product-2.jpg" alt="" style="width: 50px;"> Colorful
+                            <td class="align-middle"><img
+                                    src="${pageContext.servletContext.contextPath}img/product-3.jpg" alt=""
+                                    style="width: 50px;"> Colorful
                                 Stylish Shirt
                             </td>
                             <td class="align-middle">$150</td>
+                            <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select></td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
@@ -90,10 +140,18 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="${pageContext.servletContext.contextPath}img/product-3.jpg" alt="" style="width: 50px;"> Colorful
+                            <td class="align-middle"><img
+                                    src="${pageContext.servletContext.contextPath}img/product-4.jpg" alt=""
+                                    style="width: 50px;"> Colorful
                                 Stylish Shirt
                             </td>
                             <td class="align-middle">$150</td>
+                            <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select></td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
@@ -111,41 +169,24 @@
                                 </div>
                             </td>
                             <td class="align-middle">$150</td>
+
                             <td class="align-middle">
                                 <button class="btn btn-sm btn-primary"><i class="bi-x"></i></button>
                             </td>
                         </tr>
                         <tr>
-                            <td class="align-middle"><img src="${pageContext.servletContext.contextPath}img/product-4.jpg" alt="" style="width: 50px;"> Colorful
+                            <td class="align-middle"><img
+                                    src="${pageContext.servletContext.contextPath}img/product-5.jpg" alt=""
+                                    style="width: 50px;"> Colorful
                                 Stylish Shirt
                             </td>
                             <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus">
-                                            <i class="bi-dash"></i>
-                                        </button>
-                                    </div>
-                                    <input type="text" class="form-control form-control-sm bg-secondary text-center"
-                                           value="1">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus">
-                                            <i class="bi-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="align-middle">$150</td>
-                            <td class="align-middle">
-                                <button class="btn btn-sm btn-primary"><i class="bi-x"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="align-middle"><img src="${pageContext.servletContext.contextPath}img/product-5.jpg" alt="" style="width: 50px;"> Colorful
-                                Stylish Shirt
-                            </td>
-                            <td class="align-middle">$150</td>
+                            <td><select>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                            </select></td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">

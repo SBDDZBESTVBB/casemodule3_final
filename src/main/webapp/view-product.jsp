@@ -30,6 +30,12 @@
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
+        <jsp:include page="loginmodal.jsp">
+            <jsp:param name="login" value=""/>
+        </jsp:include>
+        <jsp:include page="registermodal.jsp">
+            <jsp:param name="register" value=""/>
+        </jsp:include>
         <div class="container-fluid pt-5">
             <div class="row px-xl-5">
                 <!-- Shop Sidebar Start -->
