@@ -54,17 +54,18 @@
                         <!-- Button trigger modal -->
                         <button type="button" class="btn" data-bs-toggle="modal"
                                 data-bs-target="#loginModal">
-                            <span>Login</span>
+                            <a>
+                                <span>Login</span></a>
                         </button>
 
                         <!-- Modal -->
 
                     </li>
                     <li class="dropdown-item d-flex align-items-center" href="#register">
-                        <button type="button" class="btn" data-bs-toggle="modal"
-                                data-bs-target="#registerModal">
+                        <a href="registermodal.jsp" class="btn">
                             <span>Register</span>
-                        </button>
+                        </a>
+
                     </li>
                 </ul>
                 <a id="userprofile" class="nav-link nav-profile d-flex align-items-center pe-0 " href="#"
