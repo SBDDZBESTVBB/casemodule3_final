@@ -15,9 +15,9 @@ public class jsp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        User user = new User();
+//        User user = new User(1,"aa","aaaa");
         ArrayList<Cartdetail> cartdetails = new ArrayList<>();
-        session.setAttribute("user",user);
+//        session.setAttribute("user",user);
         session.setAttribute("cartdetails",cartdetails);
 response.sendRedirect("/home.jsp");
     }

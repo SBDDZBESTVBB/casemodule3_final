@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <jsp:include page="${pageContext.request.contextPath}/head.jsp">
@@ -43,9 +43,10 @@
                                 <td>${p.size}</td>
                                 <td>${p.amount}</td>
                                 <td>${p.totalcartdetail}</td>
-                                <td><a href="/deleteProduct?id=${p.id}" class="btn btn-danger">Delete</a></td>
+                                <td><a href="/DeleteCart?productname=${p.productname}" class="btn btn-danger">Delete</a></td>
                             </tr>
                         </c:forEach>
+
                         </tbody>
                     </table>
                     </table>
@@ -63,22 +64,14 @@
                         <div class="card-header bg-secondary border-0">
                             <h4 class="font-weight-semi-bold m-0">Cart Summary</h4>
                         </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between mb-3 pt-1">
-                                <h6 class="font-weight-medium">Subtotal</h6>
-                                <h6 class="font-weight-medium">$150</h6>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-weight-medium">Shipping</h6>
-                                <h6 class="font-weight-medium">$10</h6>
-                            </div>
-                        </div>
                         <div class="card-footer border-secondary bg-transparent">
                             <div class="d-flex justify-content-between mt-2">
                                 <h5 class="font-weight-bold">Total</h5>
-                                <h5 class="font-weight-bold">$160</h5>
+                                <h5 class="font-weight-bold">${sum}</h5>
                             </div>
+                            <a class="btn btn-primary" href="/ConfirmOder">
                             <button class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</button>
+                            </a>
                         </div>
                     </div>
                 </div>

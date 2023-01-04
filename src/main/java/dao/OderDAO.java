@@ -14,7 +14,7 @@ public class OderDAO {
     static Connection connection = ConnectionMySql.getConnection();
 public static ArrayList<oder> showalloder (){
     ArrayList<oder> oders = new ArrayList<>();
-    String sql = "Select * from oder";
+    String sql = "Select * from casestudy_modul3_final.oder";
     try {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);
@@ -32,10 +32,10 @@ public static ArrayList<oder> showalloder (){
 
     }
     public static void creatoderbyiduser (int iduser){
-    String sql = "INSERT into oder VALUE (DEFAULT,curdate(),DEFAULT,"+iduser+")";
+    String sql = "INSERT INTO casestudy_modul3_final.oder VALUE (DEFAULT,curdate(),DEFAULT,"+iduser+")";
         try {
             Statement statement = connection.createStatement();
-            statement.executeQuery(sql);
+            statement.execute(sql);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

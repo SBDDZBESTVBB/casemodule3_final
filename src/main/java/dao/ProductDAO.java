@@ -58,7 +58,7 @@ public class ProductDAO {
         return products;
     }
 public static Product findproductbynameandsize(String productname,String size){
-        String sql = "SELECT * FROM product WHERE  product.productname = "+productname+"and product.size ="+size;
+        String sql = "SELECT * FROM product WHERE  product.productname = '"+productname+"'and product.size ='"+size+ "'";
     try {
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(sql);

@@ -25,8 +25,13 @@ public class Addtocart extends HttpServlet {
         HttpSession session = request.getSession();
         ArrayList<Cartdetail> cartdetails = (ArrayList<Cartdetail>) session.getAttribute("cartdetails");
         cartdetails.add(new Cartdetail(productname, size, amount, price, totalcart));
+        double sum=0;
+        for (int i = 0; i < cartdetails.size(); i++) {
+           sum = sum+ cartdetails.get(i).getAmount()*cartdetails.get(i).getPrice();
+        }
         session.setAttribute("cartdetails",cartdetails);
-        request.setAttribute("cardetails",cartdetails);
+        request.setAttribute("cartdetails",cartdetails);
+        request.setAttribute("sum",sum);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/cart-detail.jsp");
         dispatcher.forward(request,response);
     }
