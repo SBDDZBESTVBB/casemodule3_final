@@ -19,9 +19,6 @@
   <jsp:include page="loginmodal.jsp">
     <jsp:param name="login" value=""/>
   </jsp:include>
-  <jsp:include page="registermodal.jsp">
-    <jsp:param name="register" value=""/>
-  </jsp:include>
   <section class="section">
     <!-- Topbar End -->
     <!-- Modal -->
