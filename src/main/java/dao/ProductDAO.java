@@ -18,7 +18,7 @@ public class ProductDAO {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
+                int id = resultSet.getInt("idproduct");
                 String category = resultSet.getString("category");
                 String productname = resultSet.getString("productname");
                 String color = resultSet.getString("color");

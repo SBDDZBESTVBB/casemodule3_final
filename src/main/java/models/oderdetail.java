@@ -10,6 +10,13 @@ public class oderdetail {
     public oderdetail() {
     }
 
+    public oderdetail(int idproduct, int amount, double totaloderdetail, int idoder) {
+        this.idproduct = idproduct;
+        this.amount = amount;
+        this.totaloderdetail = totaloderdetail;
+        this.idoder = idoder;
+    }
+
     public oderdetail(int idoderdetail, int idproduct, int amount, double totaloderdetail, int idoder) {
         this.idoderdetail = idoderdetail;
         this.idproduct = idproduct;
