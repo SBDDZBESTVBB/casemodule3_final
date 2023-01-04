@@ -18,7 +18,12 @@
 
 
 <main id="main" class="main">
-
+    <jsp:include page="loginmodal.jsp">
+        <jsp:param name="login" value=""/>
+    </jsp:include>
+    <jsp:include page="registermodal.jsp">
+        <jsp:param name="register" value=""/>
+    </jsp:include>
     <div class="pagetitle">
         <%--        <h1>Dashboard</h1>--%>
         <%--        <nav>--%>
@@ -161,14 +166,13 @@
                                     <input type="text" class="form-control" placeholder="Search by name">
                                     <div class="input-group-append">
                                         <span class="input-group-text bg-transparent text-primary">
-                                            <i class="fa fa-search"></i>
+                                            <i class="bi bi-search"></i>
                                         </span>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-
                     <c:forEach var="p" items="${products}">
                         <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
                             <div class="card product-item border-0 mb-4">
@@ -185,63 +189,18 @@
                                 <div class="card-footer d-flex justify-content-between bg-light border">
                                     <a href="" class="btn btn-sm text-dark p-0"><i
                                             class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                    <a href="" class="btn btn-sm text-dark p-0"><i
-                                            class="fas fa-shopping-cart text-primary mr-1"></i>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#staticBackdrop">
-                                            Add To Cart
-                                        </button>
-                                    </a>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="addToCart" data-bs-backdrop="static"
-                                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="addToCartLabel"
-                                         aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="addToCartLabel">Add to cart</h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                            aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
-                                                    <img class="img-fluid w-100"
-                                                         src="${p.imgproduct}">
-                                                </div>
-                                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
-                                                    <h6 class="text-truncate mb-3">${p.productname}</h6>
-                                                    <div class="d-flex justify-content-center">
-                                                        <h6>${p.price}</h6>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <select>Size
-                                                        <option>S</option>
-                                                        <option>M</option>
-                                                        <option>L</option>
-                                                        <option>XL</option>
-                                                    </select>
-                                                    <label for="amount">Amount</label>
-                                                    <input type="number" id="amount">
-                                                </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                            data-bs-dismiss="modal">Close
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary">Understood</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    <i class="fas fa-shopping-cart text-primary mr-1"></i>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#${p.idproduct}">
+                                        Add To Cart
+                                    </button>
 
                                 </div>
                             </div>
                         </div>
-                    </c:forEach>
 
+                    </c:forEach>
                     <div class="col-12 pb-1">
                         <nav aria-label="Page navigation">
                             <ul class="pagination justify-content-center mb-3">

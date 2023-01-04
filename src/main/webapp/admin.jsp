@@ -36,6 +36,18 @@
                 <jsp:param name="addnew" value=""/>
             </jsp:include>
         </div>
+        <span><button class="btn" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#adminview" aria-expanded="false" aria-controls="adminview">
+                    Admin View Product
+                </button></span>
+        <span><button class="btn" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#topselling" aria-expanded="false" aria-controls="topselling">
+                    Show TOP Selling
+                </button></span>
+        <span>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#addnew">
+                    Add new product
+                </button></span>
         <div class="row collapsed" id="topselling">
             <div class="col-12">
                 <div class="card top-selling overflow-auto">
@@ -47,7 +59,6 @@
                                 <th scope="col">Product</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Sold</th>
-                                <th scope="col">Comment</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -101,12 +112,28 @@
         </div>
         <div class="row collapsed" id="adminview">
             <table>
+                <thead>
                 <th>img</th>
                 <th>Product's name</th>
                 <th>Size</th>
                 <th>Price</th>
                 <th></th>
                 <th></th>
+                </thead>
+                <tbody>
+                <c:forEach var="p" items="${product}">
+                    <td>img</td>
+                    <td>name</td>
+                    <td>size</td>
+                    <td>price</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Edit</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                </c:forEach>
+                </tbody>
             </table>
         </div>
     </section>

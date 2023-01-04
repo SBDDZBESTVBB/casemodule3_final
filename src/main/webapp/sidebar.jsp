@@ -117,28 +117,19 @@
         <li class="nav-item">
             <a class="nav-link collapsed">
                 <i class="bi bi-plus"></i>
-                <span>
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#addnew">
-                    Add new product
-                </button></span>
+
             </a>
         </li><!-- End Profile Page Nav -->
 
         <li class="nav-item">
             <a class="nav-link collapsed">
-                <span><button class="btn" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#topselling" aria-expanded="false" aria-controls="topselling">
-                    Show TOP Selling
-                </button></span>
+
             </a>
         </li><!-- Show top selling -->
 
         <li class="nav-item">
             <a class="nav-link collapsed">
-                <span><button class="btn" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#adminview" aria-expanded="false" aria-controls="adminview">
-                    Admin View Product
-                </button></span>
+
             </a>
         </li><!-- End Contact Page Nav -->
 
