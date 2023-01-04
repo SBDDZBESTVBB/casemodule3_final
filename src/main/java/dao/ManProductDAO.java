@@ -57,7 +57,7 @@ public class ManProductDAO {
     }
     public static List<Product> getAllManJeans() {
         List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM product WHERE product.category='jeans' AND product.size='s' and product.producttype='men' ";
+        String sql = "SELECT * FROM product WHERE product.category='jean' AND product.size='s' and product.producttype='men' ";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -121,6 +121,26 @@ public class ManProductDAO {
         }
         return products;
     }
+    public static List<Product> getAllMan() {
+        List<Product> products = new ArrayList<>();
+        String sql = "SELECT * FROM product WHERE product.size='s' and product.producttype='men' ";
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("idproduct");
+                String category = resultSet.getString("category");
+                String productname = resultSet.getString("productname");
+                String color = resultSet.getString("color");
+                String size = resultSet.getString("size");
+                double price = resultSet.getDouble("price");
+                int amountproduct = resultSet.getInt("amountproduct");
+                String imgproduct = resultSet.getString("imgproduct");
+                products.add(new Product(id,category,productname,color,size,price,amountproduct,imgproduct));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return products;
 
-
-}
+}}

@@ -1,5 +1,6 @@
 package controllers;
 
+import dao.ProductDAO;
 import models.Cartdetail;
 import models.User;
 import models.oderdetail;
@@ -15,11 +16,10 @@ public class jsp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-//        User user = new User(1,"aa","aaaa");
         ArrayList<Cartdetail> cartdetails = new ArrayList<>();
-//        session.setAttribute("user",user);
         session.setAttribute("cartdetails",cartdetails);
-response.sendRedirect("/home.jsp");
+        request.setAttribute("products", ProductDAO.getAll());
+        response.sendRedirect("/home.jsp");
     }
 
     @Override

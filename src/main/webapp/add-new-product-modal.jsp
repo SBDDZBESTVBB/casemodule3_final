@@ -21,49 +21,83 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class="row g-3 needs-validation" novalidate>
+                <form action="/AdminProductServlet?action=create" method="post"  class="row g-3 needs-validation" novalidate>
                     <div class="row">
-                        <label for="product'sName" class="form-label">Product's name</label>
-                        <input type="text" class="form-control" id="product'sName"
-                               aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                            Please enter product's name.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="category" class="form-label">Product's category</label>
-                        <input type="text" class="form-control" id="category"
-                               aria-describedby="inputGroupPrepend" required>
+                        <label  class="form-label">Product's category</label>
+                        <input type="text" class="form-control"
+                               aria-describedby="inputGroupPrepend" requir1ed name="category">
                         <div class="invalid-feedback">
                             Please enter product's category.
                         </div>
                     </div>
+
                     <div class="row">
-                        <label for="product'sType" class="form-label">Product's type</label>
-                        <input type="text" class="form-control" id="product'sType"
-                               aria-describedby="inputGroupPrepend" required>
+                        <label  class="form-label">Product's name</label>
+                        <input type="text" class="form-control"
+                               aria-describedby="inputGroupPrepend" required name="name">
+                        <div class="invalid-feedback">
+                            Please enter product's name.
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label for="product'sColor" class="form-label">Product's color</label>
+                        <input type="text" class="form-control" id="product'sColor"
+                               aria-describedby="inputGroupPrepend" required name="color">
                         <div class="invalid-feedback">
                             Please enter product's type.
                         </div>
                     </div>
+
+
                     <div class="row">
                         <label for="product'sSize" class="form-label">Product's size</label>
                         <input type="text" class="form-control" id="product'sSize"
-                               aria-describedby="inputGroupPrepend" required>
+                               aria-describedby="inputGroupPrepend" required name="size">
                         <div class="invalid-feedback">
                             Please enter product's size.
                         </div>
                     </div>
+
                     <div class="row">
                         <label for="product'Price" class="form-label">Product's price</label>
-                        <input type="text" class="form-control" id="product'Price"
-                               aria-describedby="inputGroupPrepend" required>
+                        <input type="text" class="form-control" id="product'Price"aria-describedby="inputGroupPrepend" required name="price">
                         <div class="invalid-feedback">
                             Please enter product's price.
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Login</button>
+
+                    <div class="row">
+                        <label for="product'Amount" class="form-label">Product's amount</label>
+                        <input type="text" class="form-control" id="product'Amount"
+                               aria-describedby="inputGroupPrepend" required name="amount">
+                        <div class="invalid-feedback">
+                            Please enter product's price.
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label for="product'Img" class="form-label">Product's img</label>
+                        <input type="text" class="form-control" id="product'Img"
+                               aria-describedby="inputGroupPrepend" required name="img">
+                        <div class="invalid-feedback">
+                            Please enter product's price.
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label for="product'sType" class="form-label">Product's type</label>
+                        <input type="text" class="form-control" id="product'sType"
+                               aria-describedby="inputGroupPrepend" required name="type">
+                        <div class="invalid-feedback">
+                            Please enter product's type.
+                        </div>
+                    </div>
+                    <%--                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button>--%>
+                    <a href="admin.jsp">Close</a>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </form>
             </div>
         </div>

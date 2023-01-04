@@ -22,4 +22,7 @@ public class ManProductService {
     public static List<Product> getSearchManShort(){
         return ManProductDAO.getSearchManShort();
     }
-}
+
+    public static List<Product> getAllMan() {return ManProductDAO.getAllMan();}
+    }
+

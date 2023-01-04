@@ -36,77 +36,59 @@
                 <jsp:param name="addnew" value=""/>
             </jsp:include>
         </div>
-        <div class="row collapsed" id="topselling">
-            <div class="col-12">
-                <div class="card top-selling overflow-auto">
-                    <div class="card-body pb-0"><h5 class="card-title">Top Selling</h5>
-                        <table class="table table-borderless">
-                            <thead>
-                            <tr>
-                                <th scope="col">Preview</th>
-                                <th scope="col">Product</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Sold</th>
-                                <th scope="col">Comment</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row"><a href="#"><img src="/img/product-1.jpg" height="150" width="200"
-                                                                 alt=""></a></th>
-                                <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                                <td>$64</td>
-                                <td class="fw-bold">124</td>
-                                <td>$5,828</td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#"><img src="/img/product-2.jpg" height="150" width="200"
-                                                                 alt=""></a></th>
-                                <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a>
-                                </td>
-                                <td>$46</td>
-                                <td class="fw-bold">98</td>
-                                <td>$4,508</td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#"><img src="/img/product-3.jpg" height="150" width="200"
-                                                                 alt=""></a></th>
-                                <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                                <td>$59</td>
-                                <td class="fw-bold">74</td>
-                                <td>$4,366</td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#"><img src="/img/product-4.jpg" height="150" width="200"
-                                                                 alt=""></a></th>
-                                <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                                <td>$32</td>
-                                <td class="fw-bold">63</td>
-                                <td>$2,016</td>
-                            </tr>
-                            <tr>
-                                <th scope="row"><a href="#"><img src="/img/product-5.jpg" height="150" width="200"
-                                                                 alt=""></a></th>
-                                <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a>
-                                </td>
-                                <td>$79</td>
-                                <td class="fw-bold">41</td>
-                                <td>$3,239</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary"><a class="btn btn-primary"
+                                                             href="/AdminProductServlet?action=show">Admin View
+                Product</a></button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#addnew"> Add new product
+            </button>
         </div>
-        <div class="row collapsed" id="adminview">
+<%--        <span>--%>
+<%--            <a class="btn btn-primary" href="/AdminProductServlet?action=show">Admin View Product</a>--%>
+<%--                </span>--%>
+<%--        <a class="btn btn-primary">--%>
+<%--            <button type="button" class="btn btn-primary" data-bs-toggle="modal"--%>
+<%--                    data-bs-target="#addnew">--%>
+<%--                Add new product--%>
+<%--            </button>--%>
+<%--        </a>--%>
+        <div class="row" id="adminview">
             <table>
-                <th>img</th>
-                <th>Product's name</th>
-                <th>Size</th>
-                <th>Price</th>
-                <th></th>
-                <th></th>
+                <thead>
+                <tr>
+                    <th scope="col">Img</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Product name</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Amount</th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="p" items="${show}">
+                    <tr>
+                        <td><img src="${p.imgproduct}" height="150" width="200"></td>
+                        <td>${p.producttype}</td>
+                        <td>${p.category}</td>
+                        <td>${p.productname}</td>
+                        <td>${p.color}</td>
+                        <td>${p.size}</td>
+                        <td>${p.price}</td>
+                        <td>${p.amountproduct}</td>
+                        <td><a href="/AdminProductServlet?action=edit&&id=${p.idproduct}"
+                               class="btn btn-warning">Edit</a></td>
+                        <td><a href="/AdminProductServlet?action=delete&&id=${p.idproduct}" class="btn btn-danger">Delete</a>
+                        </td>
+
+                    </tr>
+                </c:forEach>
+
+                </tbody>
             </table>
         </div>
     </section>

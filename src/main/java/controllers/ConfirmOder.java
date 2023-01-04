@@ -30,7 +30,9 @@ public class ConfirmOder extends HttpServlet {
             Double totaloderdetail = product.getPrice()*cartdetails.get(i).getAmount();
             oderdetail oderdetail = new oderdetail(product.getIdproduct(),cartdetails.get(i).getAmount(),totaloderdetail,idoder);
             OderdetailDAO.save(oderdetail);
+
         }
+        response.sendRedirect("/index.jsp");
     }
 
     @Override

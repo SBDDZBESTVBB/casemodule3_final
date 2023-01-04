@@ -25,6 +25,17 @@ public class Product {
         this.imgproduct = imgproduct;
     }
 
+    public Product(String category, String producttype, String productname, String color, String size, double price, int amountproduct, String imgproduct) {
+        this.category = category;
+        this.producttype = producttype;
+        this.productname = productname;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.amountproduct = amountproduct;
+        this.imgproduct = imgproduct;
+    }
+
     public Product(int idproduct, String category, String producttype, String productname, String color, String size, double price, int amountproduct, String imgproduct) {
         this.idproduct = idproduct;
         this.category = category;

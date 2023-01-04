@@ -35,6 +35,10 @@ public class ManProductServlet extends HttpServlet {
                 request.setAttribute("products", ManProductService.getAllManShort());
                 requestDispatcher = request.getRequestDispatcher("view-product.jsp");
                 break;
+            case "alll":
+                request.setAttribute("products", ManProductService.getAllMan());
+                requestDispatcher = request.getRequestDispatcher("view-product.jsp");
+                break;
 
             default:
                 break;

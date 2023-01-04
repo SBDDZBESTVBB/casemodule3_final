@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: Acer
@@ -12,7 +13,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 action = "register" method = "post">Register</h1>
+                <h1 >Register</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -20,7 +21,7 @@
 
                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                    <form class="row g-3 needs-validation" novalidate method="post">
+                    <form action = "register" method = "post">
                         <div class="row">
                             <label for="yourName" class="form-label">Your name</label>
                             <input name="username" class="form-control" id="yourName"
@@ -74,7 +75,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Register</button>
+                            <button type="submit" class="btn btn-primary">Register</button>
                         </div>
 
                     </form>
