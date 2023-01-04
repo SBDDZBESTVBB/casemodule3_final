@@ -57,6 +57,25 @@ public class ProductDAO {
         }
         return products;
     }
+public static Product findproductbynameandsize(String productname,String size){
+        String sql = "SELECT * FROM product WHERE  product.productname = "+productname+"and product.size ="+size;
+    try {
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(sql);
+        resultSet.next();
+        int idproduct = resultSet.getInt("idproduct");
+        String category = resultSet.getString("category");
+        String producttype = resultSet.getString("producttype");
+        String img = resultSet.getString("imgproduct");
+        double price = resultSet.getDouble("price");
+        String color = resultSet.getString("color");
+        int amount = Integer.parseInt(resultSet.getString("amountproduct"));
 
+        return new Product(idproduct,category,producttype,productname,color,size,price,amount,img);
+    } catch (Exception e) {
+        e.printStackTrace();
+        return null;
+    }
+}
 
 }

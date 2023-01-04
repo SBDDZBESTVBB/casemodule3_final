@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Cartdetail;
 import models.User;
 import models.oderdetail;
 
@@ -15,9 +16,9 @@ public class jsp extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         User user = new User();
-        ArrayList<oderdetail> oderdetails = new ArrayList<>();
+        ArrayList<Cartdetail> cartdetails = new ArrayList<>();
         session.setAttribute("user",user);
-        session.setAttribute("oderdetail",oderdetails);
+        session.setAttribute("cartdetails",cartdetails);
 response.sendRedirect("/home.jsp");
     }
 

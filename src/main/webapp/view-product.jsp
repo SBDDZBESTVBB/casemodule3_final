@@ -192,18 +192,22 @@
                                         <h6 class="text-truncate mb-3">${p.productname}</h6>
                                         <div class="d-flex justify-content-center">
                                             <h6>${p.price}</h6>
+
+                                            <label for="amount">Amount</label>
+                                            <input type="number" id="amount1" name="amount" style="width: 50px">
                                         </div>
                                     </div>
                                     <div class="card-footer d-flex justify-content-between bg-light border">
-                                        <a href="" class="btn btn-sm text-dark p-0"><i
-                                                class="fas fa-eye text-primary mr-1"></i>View Detail</a>
-                                        <a href="" class="btn btn-sm text-dark p-0"><i
-                                                class="fas fa-shopping-cart text-primary mr-1"></i>
+                                        <select name="size" >Size
+                                            <option>S</option>
+                                            <option>M</option>
+                                            <option>L</option>
+                                            <option>XL</option>
+                                        </select>
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                    data-bs-target="#addtocart">
+                                            <a href="/Addtocart?productname=${p.productname}price=${p.price}">
                                                 Add To Cart
-                                            </button>
+                                            </a>
                                         </a>
                                         <!-- Modal -->
                                         <div class="modal fade" id="addToCart" data-bs-backdrop="static"

@@ -14,7 +14,7 @@ public class ProductWomenDAO {
     public static List<Product> getAllWomenShirt() {
         List<Product> products = new ArrayList<>();
 
-        String sql = "SELECT * FROM product WHERE product.category='shirts' and product.producttype='women'product.size='s'";
+        String sql = "SELECT * FROM product WHERE product.category='shirts' and product.producttype='women' and product.size='s'";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
